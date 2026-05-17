@@ -87,8 +87,9 @@ Actualización de Registros
 UPDATE producto
 SET stock = 45
 WHERE codigo = 1;
-
+```
 Borrado de Registros
+```
 DELETE FROM producto
 WHERE codigo = 1;
 ```
