@@ -2,7 +2,7 @@
 SEMINARIO DE PRÁCTICA DE INFORMÁTICA - INF275-11807  Trabajo Práctico N° 2
 
 Creación de las Tablas MySQL
-
+```
 CREATE DATABASE libreria_jugueteria;
 
 USE libreria_jugueteria;
@@ -61,19 +61,19 @@ CREATE TABLE movimiento_stock (
     FOREIGN KEY (id_empleado)
     REFERENCES empleado(id_empleado)
 );
-
+```
 Inserción, Consulta y Borrado de Registros
 
 Inserción de Registros
-
+```
 INSERT INTO producto(nombre, categoria, precio, stock, stock_minimo)
 VALUES ('Cuaderno A4', 'Librería', 3500, 50, 10);
 
 INSERT INTO empleado(nombre, usuario, contraseña)
 VALUES ('Juan Pérez', 'juanp', '1234');
-
+```
 Consulta de Registros
-
+```
 SELECT * FROM producto;
 
 SELECT nombre, stock
@@ -81,9 +81,9 @@ FROM producto;
 
 SELECT *
 FROM venta;
-
+```
 Actualización de Registros
-
+```
 UPDATE producto
 SET stock = 45
 WHERE codigo = 1;
@@ -91,29 +91,31 @@ WHERE codigo = 1;
 Borrado de Registros
 DELETE FROM producto
 WHERE codigo = 1;
-
+```
 Presentación de las Consultas SQL
 
 Consulta de productos con stock bajo
-
+```
 SELECT nombre, stock
 FROM producto
 WHERE stock <= stock_minimo;
 Consulta de ventas registradas
 SELECT id_venta, fecha, total
 FROM venta;
-
+```
 Consulta del total vendido
-
+```
 SELECT SUM(total) AS total_vendido
 FROM venta;
-
+```
 Consulta de movimientos de stock
-
+```
 SELECT tipo_movimiento, fecha, cantidad
 FROM movimiento_stock;
-
+```
 Consulta de productos por categoría
+```
 SELECT nombre, categoria
 FROM producto
 WHERE categoria = 'Librería';
+```
