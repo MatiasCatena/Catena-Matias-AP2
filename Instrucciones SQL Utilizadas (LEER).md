@@ -100,7 +100,9 @@ Consulta de productos con stock bajo
 SELECT nombre, stock
 FROM producto
 WHERE stock <= stock_minimo;
+```
 Consulta de ventas registradas
+```
 SELECT id_venta, fecha, total
 FROM venta;
 ```
